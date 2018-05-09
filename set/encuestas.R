@@ -1,13 +1,3 @@
-############################
-#                          #
-# Tarea - Caso Encuestas   #
-# Alumnos: Luigui Parodi   #
-#          Fabricio Torrico#
-#                          #   
-############################
-
-#Inicializamos proyecto y creamos carpetas
-
   rm(list=ls())
   setwd(file.path(Sys.getenv("HOME")))
   dir.create("Caso_Estudiantes")
@@ -47,10 +37,6 @@
   
   Tabla_Seccion <- read.csv("datasets/Seccion.csv", header = TRUE, sep = ",", col.names = c("ID_Seccion", "Seccion", "ID_ProfesorS", "ID_CursoS", "ID_CampusS"))
   View(Tabla_Seccion) 
-  
-###########################################################
-#                       Consultas                         #
-###########################################################
   
 #a.Puntaje promedio por curso, sección, docente, carrera, facultad, campus.
 
@@ -129,9 +115,6 @@
                       ORDER BY TE.Puntaje DESC
                       LIMIT 10')
     View(Top_Profesores)
-    
-###########################################################
-#               Exportación de archivos                   #
-###########################################################   
+       
 
   
